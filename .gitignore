@@ -1,0 +1,15 @@
+# Compiled C artifacts
+*.o
+*.out
+
+# HW executables (source files have the same basename plus .c)
+hw*/basics_of_pointers
+hw*/pointer_arithmetic
+hw*/pointers_and_functions
+hw*/pointers_to_pointers
+hw*/strings_and_character_pointers
+
+# Editor and OS files
+.DS_Store
+*~
+*.swp
