@@ -7,7 +7,7 @@ int main () {
 		*(a + i) += 1;
 	}
 
-	printf("Updated Array");
+	printf("Updated Array\n");
 
 	for (int i = 0; i < 5; i++) {
 		printf("using pointer: a[%d] = %d\n", i, *(a + i));
