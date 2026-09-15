@@ -3,7 +3,6 @@
 #include <sys/types.h> 
 #include <sys/wait.h>
 #include <unistd.h>
-#include <stdint.h>
 
 int main () {
 	pid_t pid;
