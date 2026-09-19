@@ -14,6 +14,10 @@ hw2/multiple_fork_calls
 hw2/multiple_forks_and_execs
 hw2/simple_fork_and_exec
 
+# HW3: publish source files only; keep compiled programs local
+hw3/*
+!hw3/*.c
+
 # Editor and OS files
 .DS_Store
 *~
