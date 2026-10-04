@@ -11,7 +11,7 @@ int main () {
 
 	arr = (int *)malloc(n * sizeof(int));
 	if (arr == NULL) {
-        	perror("Allocation failed\n");
+		perror("Allocation failed\n");
 		return 1;
     	}
 
@@ -28,7 +28,7 @@ int main () {
 	printf("Sum of the array: %ld\n", sum);
 
 	free(arr);
-
+	arr = NULL;
 
 	return 0;
 }
