@@ -8,8 +8,8 @@ int main () {
 
 	arr = (int *)malloc(n * sizeof(int));
 	if (arr == NULL) {
-        	printf("Memory allocation failed!\n");
-        	perror("malloc failed\n");
+		printf("Memory allocation failed!\n");
+		perror("malloc failed\n");
 		return 1;
     	}
 
@@ -23,15 +23,16 @@ int main () {
         	printf("Memory reallocation failed!\n");
         	free(arr);
         	return 1;
-    	}
+	}
 
 	printf("Array after resizing: ");
 	for (int i = 0; i < new_n; i++) {
 		printf("%d ", new_arr[i]);
-    	}
+	}
 	printf("\n");
 
 	free(new_arr);
+	new_arr = NULL;
 
 	return 0;
 }
