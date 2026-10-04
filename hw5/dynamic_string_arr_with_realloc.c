@@ -23,14 +23,13 @@ int main () {
 			return 1;
         	}
 		scanf("%49s", arr[i]);
-    	}
+	}
 
 	char **new_arr = (char **)realloc(arr, new_n * sizeof(char *));
 	if (new_arr == NULL) {
-        	printf("Memory reallocation failed!\n");
 		perror("realloc failed");
-        	free(arr);
-        	return 1;
+		free(arr);
+		return 1;
     	}
 
 
@@ -38,10 +37,9 @@ int main () {
 	for (int i = n; i < new_n; i++) {
 		new_arr[i] = (char *)malloc(n_str * sizeof(char));
 		if (new_arr[i] == NULL) {
-                        printf("Memory allocation failed for string %d!\n", i);
-                        perror("malloc failed");
-                        return 1;
-                }
+			perror("malloc failed");
+			return 1;
+		}
 		scanf("%49s", new_arr[i]);
 	}
 	
@@ -53,8 +51,11 @@ int main () {
 
 	for (int i = 0; i < new_n; i++) {
     		free(new_arr[i]);
+		new_arr[i] = NULL;
 	}
+
 	free(new_arr);
+	new_arr = NULL;
 
 	return 0;
 }
