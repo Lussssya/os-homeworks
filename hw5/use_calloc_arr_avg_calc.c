@@ -10,9 +10,8 @@ int main () {
 
 	arr = (int *)calloc(n, sizeof(int));
 	if (arr == NULL) {
-        	printf("Memory allocation failed!\n");
 		perror("Allocation failed\n");
-        	return 1;
+		return 1;
     	}
 
 	printf("Array after calloc: ");
@@ -35,6 +34,9 @@ int main () {
 
 	avg /= n;
 	printf("\nAverage of the array: %.2f\n", avg);
+
+	free(arr);
+	arr = NULL;
 
 	return 0;
 }
