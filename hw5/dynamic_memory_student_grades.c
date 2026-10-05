@@ -9,8 +9,7 @@ int main () {
 	scanf("%d", &n);
 	
 	arr = (int *)malloc(n * sizeof(int));
-	if (arr == NULL) {
-		printf("Memory allocation failed!");
+	if (arr == NULL) { 
 		perror("malloc failed");
 		return 1;
 	}
@@ -32,7 +31,7 @@ int main () {
 	printf("Lowest grade: %d\n", min);
 
 	free(arr);
-
+	arr = NULL;
 
 	return 0;
 }
