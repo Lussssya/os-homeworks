@@ -118,6 +118,8 @@ int main () {
                 }
         }
 
+	// O_APPEND positions each write at EOF, and writing advances the offset.
+	// SEEK_CUR with 0 returns that updated offset without moving it.
         off_t position = lseek(fd, 0, SEEK_CUR);
         if (position < 0) {
                 perror("fail getting file position");
