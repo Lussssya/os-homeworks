@@ -3,8 +3,8 @@
 
 void* print_thread (void *arg) {
         pthread_t self = pthread_self();
-	printf("Thread %lu is running!\n", (unsigned long)self);
-	return NULL;
+        printf("Thread %lu is running!\n", (unsigned long)self);
+        return NULL;
 }
 
 int main () {
